@@ -2,10 +2,10 @@
 {
     interface ISortingAlgorithms
     {
-        void BubbleSort<T>(T[] array);
-        void QuickSort<T>(T[] array, int left, int rigth);
-        void SelectionSort<T>(T[] array);
-        void InsertionSort<T>(T[] array);
-        void MergeSort<T>(T[] array);
+        void BubbleSort(int[] array);
+        void QuickSort(int[] array, int left, int rigth);
+        void SelectionSort(int[] array);
+        void InsertionSort(int[] array);
+        void MergeSort(int[] array, int left, int rigth);
     }
 }

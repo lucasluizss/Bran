@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Bran.Implementations;
+using System;
+using System.Linq;
 
 namespace Bran
 {
@@ -6,7 +8,15 @@ namespace Bran
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("======================= Hello Bran! =======================\n");
+
+            Console.Write("Choose an option: ");
+
+            var methodsSearch = new SearchAlgorithms().GetType().GetMethods().ToList();
+
+            methodsSearch.ForEach(method => Console.WriteLine($"{methodsSearch.IndexOf(method)} - {method.Name}"));
+
+            Console.ReadKey();
         }
     }
 }
